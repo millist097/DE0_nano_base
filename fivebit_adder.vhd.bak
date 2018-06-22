@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity fivebit_adder is 
+port( in_1, in_2 : in std_logic_vector(3 downto 0);
+		carry_in : in std_logic;
+		res_out : out std_logic_vector(3 downto 0);
+		b_out : out std_logic);
+end entity fivebit_adder;
+
+architecture behave fivebit_adder of fivebit_adder is
+	signal carry_4,carry_3,carry_2,carry_1,carry_0 : std_logic;
+
+	component full_add is 
+		port( res, carry_out : out std_logic;
+				a, b, carry_in : in std_logic);
+	end component full_sub;
+	
+
+	
+begin
+	fs0 : component full_sub port map (res_out(0),carry_0,
+					in_1(0),in_2(0),carry_in);
+	fs1 : component full_sub port map (res_out(1),w,
+					in_1(1),in_2(1),carry_0);
+	fs2 : component full_sub port map (res_out(2),y,
+					in_1(2),in_2(2),w);
+	fs3 : component full_sub port map (res_out(3),b_out,
+					in_1(3),in_2(3),y);
+
+end architecture DE0_NANO_behave;

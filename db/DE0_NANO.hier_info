@@ -1,0 +1,49 @@
+|DE0_NANO
+in_1[0] => full_sub:fs0.a
+in_1[1] => full_sub:fs1.a
+in_1[2] => full_sub:fs2.a
+in_1[3] => full_sub:fs3.a
+in_2[0] => full_sub:fs0.b
+in_2[1] => full_sub:fs1.b
+in_2[2] => full_sub:fs2.b
+in_2[3] => full_sub:fs3.b
+b_in => full_sub:fs0.borrow_in
+res_out[0] << full_sub:fs0.res
+res_out[1] << full_sub:fs1.res
+res_out[2] << full_sub:fs2.res
+res_out[3] << full_sub:fs3.res
+b_out << full_sub:fs3.borrow_out
+
+
+|DE0_NANO|full_sub:fs0
+res <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+borrow_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN2
+b => Add0.IN1
+borrow_in => Add1.IN4
+
+
+|DE0_NANO|full_sub:fs1
+res <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+borrow_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN2
+b => Add0.IN1
+borrow_in => Add1.IN4
+
+
+|DE0_NANO|full_sub:fs2
+res <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+borrow_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN2
+b => Add0.IN1
+borrow_in => Add1.IN4
+
+
+|DE0_NANO|full_sub:fs3
+res <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+borrow_out <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN2
+b => Add0.IN1
+borrow_in => Add1.IN4
+
+
