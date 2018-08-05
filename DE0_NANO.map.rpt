@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE0_NANO
-Fri Jun 22 18:13:07 2018
+Wed Jun 27 08:15:19 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,12 +10,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,20 +36,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 22 18:13:06 2018      ;
+; Analysis & Synthesis Status        ; Failed - Wed Jun 27 08:15:19 2018          ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; DE0_NANO                                   ;
 ; Top-level Entity Name              ; DE0_NANO                                   ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 8                                          ;
-;     Total combinational functions  ; 8                                          ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 14                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -156,91 +151,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                         ; Library ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------+---------+
-; full_sub.vhd                     ; yes             ; User VHDL File        ; /home/glitch/Documents/github/NanoIntro/full_sub.vhd ;         ;
-; DE0_NANO.vhd                     ; yes             ; Auto-Found VHDL File  ; /home/glitch/Documents/github/NanoIntro/DE0_NANO.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+------------------------------------------------------+---------+
-
-
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 8                   ;
-;                                             ;                     ;
-; Total combinational functions               ; 8                   ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- 3 input functions                    ; 8                   ;
-;     -- <=2 input functions                  ; 0                   ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 8                   ;
-;     -- arithmetic mode                      ; 0                   ;
-;                                             ;                     ;
-; Total registers                             ; 0                   ;
-;     -- Dedicated logic registers            ; 0                   ;
-;     -- I/O registers                        ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 14                  ;
-; Embedded Multiplier 9-bit elements          ; 0                   ;
-; Maximum fan-out node                        ; full_sub:fs0|Add1~1 ;
-; Maximum fan-out                             ; 2                   ;
-; Total fan-out                               ; 43                  ;
-; Average fan-out                             ; 1.19                ;
-+---------------------------------------------+---------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                            ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
-; |DE0_NANO                  ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |DE0_NANO              ; work         ;
-;    |full_sub:fs0|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO|full_sub:fs0 ; work         ;
-;    |full_sub:fs1|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO|full_sub:fs1 ; work         ;
-;    |full_sub:fs2|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO|full_sub:fs2 ; work         ;
-;    |full_sub:fs3|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE0_NANO|full_sub:fs3 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Jun 22 18:12:59 2018
+    Info: Processing started: Wed Jun 27 08:15:18 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE0_NANO -c DE0_NANO
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file full_sub.vhd
@@ -258,22 +175,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file fivebit
 Info (12021): Found 2 design units, including 1 entities, in source file shift_reg.vhd
     Info (12022): Found design unit 1: shift_reg-shift_reg_behave
     Info (12023): Found entity 1: shift_reg
-Warning (12125): Using design file DE0_NANO.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: DE0_NANO-DE0_NANO_behave
-    Info (12023): Found entity 1: DE0_NANO
-Info (12127): Elaborating entity "DE0_NANO" for the top level hierarchy
-Info (12128): Elaborating entity "full_sub" for hierarchy "full_sub:fs0"
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 810 megabytes
-    Info: Processing ended: Fri Jun 22 18:13:07 2018
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:03
+Info (12021): Found 2 design units, including 1 entities, in source file booth_multiplier.vhd
+    Info (12022): Found design unit 1: booth_multiplier-behave
+    Info (12023): Found entity 1: booth_multiplier
+Error (10482): VHDL error at booth_multiplier.vhd(43): object "add_num1" is used but not declared File: /home/glitch/Documents/github/NanoIntro/booth_multiplier.vhd Line: 43
+Error (10482): VHDL error at booth_multiplier.vhd(43): object "add_num2" is used but not declared File: /home/glitch/Documents/github/NanoIntro/booth_multiplier.vhd Line: 43
+Error (10482): VHDL error at booth_multiplier.vhd(43): object "add_carry" is used but not declared File: /home/glitch/Documents/github/NanoIntro/booth_multiplier.vhd Line: 43
+Error (10482): VHDL error at booth_multiplier.vhd(43): object "add_result" is used but not declared File: /home/glitch/Documents/github/NanoIntro/booth_multiplier.vhd Line: 43
+Error (10558): VHDL error at booth_multiplier.vhd(43): cannot associate formal port "res_out" of mode "out" with an expression File: /home/glitch/Documents/github/NanoIntro/booth_multiplier.vhd Line: 43
+Error (10482): VHDL error at booth_multiplier.vhd(43): object "add_carry_out" is used but not declared File: /home/glitch/Documents/github/NanoIntro/booth_multiplier.vhd Line: 43
+Error (10558): VHDL error at booth_multiplier.vhd(43): cannot associate formal port "c_out" of mode "out" with an expression File: /home/glitch/Documents/github/NanoIntro/booth_multiplier.vhd Line: 43
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 7 errors, 1 warning
+    Error: Peak virtual memory: 763 megabytes
+    Error: Processing ended: Wed Jun 27 08:15:20 2018
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
 
 

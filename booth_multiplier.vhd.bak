@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity booth_multiplier is 
+	Port( num, multitiplcand : in std_logic_vector(6 downto 0);
+			trigger : in std_logic;
+			busy : out std_logic;
+			resut : out std_logic_vector(9 downto 0));
+end entity booth_multiplier;
+
+architecture behave of booth_multiplier is
+	signal sub_res : unsigned(1 downto 0);
+begin
+	sub_res <= (b"0" & a) - (b"0" & b) - (b"0" & borrow_in);
+	borrow_out <= sub_res(1);
+	res <= sub_res(0);
+	
+end architecture full_sub_behave;

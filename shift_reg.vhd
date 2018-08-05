@@ -21,10 +21,11 @@ begin
 		end if;
 	end process latchLogic;
 
-	process(latch) is
+	process(shift) is
 	begin
 		if rising_edge(shift) then
 			partialProduct(8 downto 0) <= partialProduct(9 downto 1);
+			partialProduct(9) <= partialProduct(9);
 			shift_out <= partialProduct(0);
 		end if;
 	end process;
